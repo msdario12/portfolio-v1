@@ -2,17 +2,15 @@ export const CustomHero = () => {
 	return (
 		<div>
 			{/* <!-- Hero --> */}
-			<div className='bg-slate-900'>
-				<div className='bg-gradient-to-b from-violet-600/[.15] via-transparent'>
+			<div className=''>
+				<div className=''>
 					<div className='max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8'>
 						{/* <!-- Announcement Banner --> */}
 						<div className='flex justify-center'>
 							<a
 								className='group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md'
 								href='../figma.html'>
-								<p className='mr-2 inline-block text-white text-sm'>
-									Preline UI Figma is live.
-								</p>
+								<p className='mr-2 inline-block text-white text-sm'>Sobre mi</p>
 								<span className='group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-white text-sm'>
 									<svg
 										className='w-2.5 h-2.5'
