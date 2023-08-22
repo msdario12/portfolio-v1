@@ -1,3 +1,5 @@
+import { HomeTitle } from '../App';
+
 const CardComponent = () => {
 	return (
 		<a className='group relative block rounded-xl overflow-hidden' href='#'>
@@ -14,7 +16,7 @@ const CardComponent = () => {
 				</div>
 			</div>
 			<div className='group-hover:top-0 absolute -top-52 bg-gray-800/50 rounded-lg p-4 transition-all  ease-in-out delay-75 w-full h-36 backdrop-blur'>
-				<p className="text-lg font-semibold">Este texto aparece al hover</p>
+				<p className='text-lg font-semibold'>Este texto aparece al hover</p>
 			</div>
 		</a>
 	);
@@ -24,9 +26,15 @@ export const PortfolioSection = () => {
 	return (
 		<div>
 			{/* <!-- Masonry Cards --> */}
-			<div className='max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
+			<div className='container px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
 				{/* <!-- Grid --> */}
 				<div className='grid sm:grid-cols-12 gap-6'>
+					<div className='col-span-4'>
+						<HomeTitle
+							title={'Proyectos'}
+							subtitle={'Algunos de los proyectos en los cuales trabajé'}
+						/>
+					</div>
 					<div className='sm:self-end col-span-12 sm:col-span-7 md:col-span-8 lg:col-span-5 lg:col-start-3'>
 						<CardComponent />
 					</div>

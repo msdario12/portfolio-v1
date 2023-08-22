@@ -2,7 +2,7 @@ export const CustomHero = () => {
 	return (
 		<div>
 			{/* <!-- Hero --> */}
-			<div className=''>
+			<div className='min-h-screen flex justify-center items-center'>
 				<div className=''>
 					<div className='max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8'>
 						{/* <!-- Announcement Banner --> */}
