@@ -1,26 +1,13 @@
 import { HomeTitle } from '../App';
-
-const CardComponent = () => {
-	return (
-		<a className='group relative block rounded-xl overflow-hidden' href='#'>
-			<div className='aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden'>
-				<img
-					className='group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover'
-					src='https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3481&q=80'
-					alt='Image Description'
-				/>
-			</div>
-			<div className='absolute bottom-0 left-0 right-0 p-2 sm:p-4'>
-				<div className='text-sm font-bold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-gray-800 dark:text-gray-200'>
-					Proyecto 1
-				</div>
-			</div>
-			<div className='group-hover:top-0 absolute -top-52 bg-gray-800/50 rounded-lg p-4 transition-all  ease-in-out delay-75 w-full h-36 backdrop-blur'>
-				<p className='text-lg font-semibold'>Este texto aparece al hover</p>
-			</div>
-		</a>
-	);
-};
+import {
+	SiExpress,
+	SiMongoose,
+	SiNodedotjs,
+	SiReactrouter,
+	SiSocketdotio,
+} from 'react-icons/si';
+import { FaBootstrap, FaReact } from 'react-icons/fa';
+import CardComponent from './CardComponent';
 
 export const PortfolioSection = () => {
 	return (
@@ -36,7 +23,27 @@ export const PortfolioSection = () => {
 						/>
 					</div>
 					<div className='sm:self-end col-span-12 sm:col-span-7 md:col-span-8 lg:col-span-5 lg:col-start-3'>
-						<CardComponent />
+						<CardComponent
+							urlImg={
+								'https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3481&q=80'
+							}
+							title={'RollingVet'}>
+							<CardComponent.Description>
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								Eveniet sunt sed est illo in officia doloribus cum expedita
+								itaque. Atque id debitis laboriosam perferendis alias ipsam
+								placeat aliquam distinctio dolor!
+							</CardComponent.Description>
+							<CardComponent.Icons>
+								<FaReact size={40} />
+								<FaBootstrap size={40} />
+								<SiExpress size={40} />
+								<SiNodedotjs size={40} />
+								<SiReactrouter size={40} />
+								<SiMongoose size={40} />
+								<SiSocketdotio size={40} />
+							</CardComponent.Icons>
+						</CardComponent>
 					</div>
 					{/* <!-- End Col --> */}
 

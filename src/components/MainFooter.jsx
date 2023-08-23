@@ -1,11 +1,4 @@
-import {
-	Envelope,
-	Github,
-	Google,
-	Linkedin,
-	Mailbox,
-	Mailbox2,
-} from 'react-bootstrap-icons';
+import { Envelope, Github, Linkedin } from 'react-bootstrap-icons';
 
 export const MainFooter = () => {
 	return (

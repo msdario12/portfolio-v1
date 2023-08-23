@@ -63,7 +63,7 @@ function App() {
 				</section>
 				<section className='bg-gradient-to-t from-violet-200/[0.15]'>
 					<HomeTitle title={'Tecnologías'} subtitle={''} />
-					<div className='container mx-auto grid my-10 grid-cols-5 grid-flow-row-dense gap-3'>
+					<div className='container mx-auto grid my-10 grid-cols-4 grid-flow-row-dense gap-3'>
 						{imageSources.map((img) => (
 							<SkillIcon key={img} name={img} />
 						))}
