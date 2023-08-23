@@ -16,10 +16,12 @@ function Description({ children }) {
 }
 const CardComponent = ({ urlImg, title, children }) => {
 	return (
-		<a className='group relative block rounded-xl overflow-hidden' href='#'>
-			<div className='aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden'>
+		<a
+			className='group relative block rounded-xl overflow-hidden h-full'
+			href='#'>
+			<div className='aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden h-full'>
 				<img
-					className='group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover'
+					className='group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl h-full w-full object-cover'
 					src={urlImg}
 					alt='Imagen de presentación de un proyecto de programación'
 				/>
@@ -27,7 +29,7 @@ const CardComponent = ({ urlImg, title, children }) => {
 			<div className='absolute bottom-0 left-0 right-0 p-2 sm:p-4'>
 				<Title title={title} />
 			</div>
-			<div className='group-hover:top-0 absolute -top-52 bg-gray-800/80  rounded-lg p-4 transition-all  ease-in-out delay-100 duration-200 w-full  backdrop-blur'>
+			<div className='group-hover:top-0 absolute top-full bg-gray-800/80  rounded-lg p-4 transition-all  ease-in-out delay-75 duration-200 w-full  backdrop-blur'>
 				{children}
 			</div>
 		</a>
