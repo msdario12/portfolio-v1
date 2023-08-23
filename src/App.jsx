@@ -1,6 +1,7 @@
-import { useState } from 'react';
 import { CustomHero } from './components/CustomHero';
 import { PortfolioSection } from './components/PortfolioSection';
+import { MainNavBar } from './components/MainNavBar';
+import { MainFooter } from './components/MainFooter';
 export const HomeTitle = ({ title, subtitle }) => {
 	return (
 		<div className='container mx-auto'>
@@ -18,7 +19,7 @@ const SkillIcon = ({ name }) => {
 		<img
 			src={URL + name}
 			alt={`Logo of ${name}`}
-			className='w-32 bg-gray-600/80 backdrop-blur-lg rounded-lg p-3'
+			className='w-32 bg-gray-600/80 backdrop-blur-lg rounded-lg p-3 hover:bg-gray-200 transition-all duration-300 ease-in-out hover:scale-110'
 		/>
 	);
 };
@@ -38,35 +39,39 @@ const imageSources = [
 
 function App() {
 	return (
-		<main className='bg-slate-900 text-gray-200 min-h-screen flex flex-col justify-between bg-gradient-to-b from-violet-600/[.15] via-transparent'>
-			<CustomHero />
-			<section className='bg-gradient-to-t from-violet-200/[0.15]'>
-				<PortfolioSection />
-			</section>
-			<section className='bg-gradient-to-b from-violet-200/[0.15]'>
-				<HomeTitle title={'Sobre mi'} subtitle={''} />
-				<div className='container mx-auto'>
-					<p>
-						Soy desarrollador web full-stack e ingeniero civil. Durante la
-						carrera siempre tuve la atracción por el lado de la programación
-						para resolver algunos de los problemas que se nos presentaban.
-					</p>
-					<p>
-						Poseo experiencia en lo que a trabajo en equipo se refiere, gracias
-						a experiencias de trabajos pasados en el ámbito de cálculo de
-						estructuras y proyectos afines.
-					</p>
-				</div>
-			</section>
-			<section className='bg-gradient-to-t from-violet-200/[0.15]'>
-				<HomeTitle title={'Tecnologías'} subtitle={''} />
-				<div className='container mx-auto grid grid-cols-5 grid-flow-row-dense gap-3'>
-					{imageSources.map((img) => (
-						<SkillIcon key={img} name={img} />
-					))}
-				</div>
-			</section>
-		</main>
+		<div>
+			<main className='bg-slate-900 text-gray-200 min-h-screen flex flex-col justify-between bg-gradient-to-b from-violet-600/[.15] via-transparent'>
+				<MainNavBar />
+				<CustomHero />
+				<section className='bg-gradient-to-t from-violet-200/[0.15]'>
+					<PortfolioSection />
+				</section>
+				<section className='bg-gradient-to-b from-violet-200/[0.15]'>
+					<HomeTitle title={'Sobre mi'} subtitle={''} />
+					<div className='container mx-auto my-10'>
+						<p>
+							Soy desarrollador web full-stack e ingeniero civil. Durante la
+							carrera siempre tuve la atracción por el lado de la programación
+							para resolver algunos de los problemas que se nos presentaban.
+						</p>
+						<p>
+							Poseo experiencia en lo que a trabajo en equipo se refiere,
+							gracias a experiencias de trabajos pasados en el ámbito de cálculo
+							de estructuras y proyectos afines.
+						</p>
+					</div>
+				</section>
+				<section className='bg-gradient-to-t from-violet-200/[0.15]'>
+					<HomeTitle title={'Tecnologías'} subtitle={''} />
+					<div className='container mx-auto grid my-10 grid-cols-5 grid-flow-row-dense gap-3'>
+						{imageSources.map((img) => (
+							<SkillIcon key={img} name={img} />
+						))}
+					</div>
+				</section>
+			</main>
+			<MainFooter />
+		</div>
 	);
 }
 
