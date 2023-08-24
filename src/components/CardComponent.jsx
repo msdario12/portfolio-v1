@@ -29,7 +29,7 @@ const CardComponent = ({ urlImg, title, children }) => {
 			<div className='absolute bottom-0 left-0 right-0 p-2 sm:p-4'>
 				<Title title={title} />
 			</div>
-			<div className='group-hover:top-0 absolute top-full bg-gray-800/80  rounded-lg p-4 transition-all  ease-in-out delay-75 duration-200 w-full  backdrop-blur'>
+			<div className='group-hover:top-0 absolute top-full   bg-gray-800/80 rounded-lg p-4 transition-all lg:m-4 m-4  ease-in-out delay-75 duration-200   backdrop-blur'>
 				{children}
 			</div>
 		</a>

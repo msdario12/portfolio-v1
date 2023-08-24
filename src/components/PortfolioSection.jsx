@@ -74,7 +74,7 @@ export const PortfolioSection = () => {
 						{/* <!-- End Card --> */}
 					</div>
 
-					<div className='col-span-12 sm:col-span-6 md:col-span-4 lg:col-start-5 lg:row-start-1 lg:row-span-2'>
+					<div className='col-span-12 sm:col-span-6 md:col-span-4 lg:col-start-5 lg:row-start-1 lg:row-span-2 lg:col-span-4'>
 						{/* <!-- Card --> */}
 						<CardComponent
 							urlImg={
