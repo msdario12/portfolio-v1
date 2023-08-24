@@ -27,7 +27,8 @@ export const PortfolioSection = () => {
 							urlImg={
 								'https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3481&q=80'
 							}
-							title={'RollingVet'}>
+							title={'RollingVet'}
+							direction={'top'}>
 							<CardComponent.Description>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 								Eveniet sunt sed est illo in officia doloribus cum expedita
@@ -54,7 +55,8 @@ export const PortfolioSection = () => {
 							urlImg={
 								'https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3481&q=80'
 							}
-							title={'Detección de colores'}>
+							title={'Detección de colores'}
+							direction={'bottom'}>
 							<CardComponent.Description>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 								Eveniet sunt sed est illo in officia doloribus cum expedita
@@ -80,7 +82,8 @@ export const PortfolioSection = () => {
 							urlImg={
 								'https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3481&q=80'
 							}
-							title={'DescansAR'}>
+							title={'DescansAR'}
+							direction={'top'}>
 							<CardComponent.Description>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 								Eveniet sunt sed est illo in officia doloribus cum expedita
@@ -107,7 +110,8 @@ export const PortfolioSection = () => {
 							urlImg={
 								'https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3481&q=80'
 							}
-							title={'Rediturre'}>
+							title={'Rediturre'}
+							direction={'right'}>
 							<CardComponent.Description>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 								Eveniet sunt sed est illo in officia doloribus cum expedita
