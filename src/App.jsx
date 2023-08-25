@@ -46,21 +46,6 @@ function App() {
 				<section className='bg-gradient-to-t from-violet-200/[0.15]'>
 					<PortfolioSection />
 				</section>
-				<section className='bg-gradient-to-b from-violet-200/[0.15]'>
-					<HomeTitle title={'Sobre mi'} subtitle={''} />
-					<div className='container mx-auto my-10'>
-						<p>
-							Soy desarrollador web full-stack e ingeniero civil. Durante la
-							carrera siempre tuve la atracción por el lado de la programación
-							para resolver algunos de los problemas que se nos presentaban.
-						</p>
-						<p>
-							Poseo experiencia en lo que a trabajo en equipo se refiere,
-							gracias a experiencias de trabajos pasados en el ámbito de cálculo
-							de estructuras y proyectos afines.
-						</p>
-					</div>
-				</section>
 				<section className='bg-gradient-to-t from-violet-200/[0.15]'>
 					<HomeTitle title={'Tecnologías'} subtitle={''} />
 					<div className='container mx-auto grid my-10 grid-cols-4 grid-flow-row-dense gap-3'>
