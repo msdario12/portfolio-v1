@@ -21,10 +21,12 @@ export const CustomParticles = () => {
 			options={{
 				fpsLimit: 120,
 				smooth: true,
-				fullScreen: {
-					enable: false,
+				style: {
+					height: '100vh',
+					zIndex: -10,
 				},
-				pauseOnOutsideViewport: true,
+				fullScreen: false,
+				eOnOutsideViewport: true,
 				interactivity: {
 					events: {
 						onHover: {

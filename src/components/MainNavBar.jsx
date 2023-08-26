@@ -1,12 +1,15 @@
+import { Envelope, Github, Linkedin } from 'react-bootstrap-icons';
+import { IconContainer } from './IconContainer';
+
 export const MainNavBar = () => {
 	return (
-		<header className='flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 dark:bg-gray-800/80 backdrop-blur-sm dark:border-gray-700 sticky top-0 inset-x-0'>
+		<header className='flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white py-3 sm:py-0 dark:bg-gray-900/70 backdrop-blur-lg dark:border-gray-700 sticky top-0 inset-x-0 shadow-lg'>
 			<nav
 				className='relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8'
 				aria-label='Global'>
 				<div className='flex items-center justify-between'>
 					<a
-						className='flex-none text-xl font-semibold dark:text-white'
+						className='flex items-center text-2xl font-bold dark:text-white bg-gradient-to-tl from-blue-600 to-violet-600 rounded-full p-2 aspect-square '
 						href='#'
 						aria-label='Dario Mansilla'>
 						DM
@@ -43,7 +46,7 @@ export const MainNavBar = () => {
 				<div
 					id='navbar-collapse-with-animation'
 					className='hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block'>
-					<div className='flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7'>
+					<div className='flex flex-col font-bold text-lg gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7'>
 						<a
 							className='font-medium text-blue-600 sm:py-6 dark:text-blue-500'
 							href='#'
@@ -53,18 +56,19 @@ export const MainNavBar = () => {
 						<a
 							className='font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500'
 							href='#'>
-							Sobre mi
-						</a>
-						<a
-							className='font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500'
-							href='#'>
 							Tecnologías
 						</a>
-						<a
-							className='font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500'
-							href='#'>
-							Contacto
-						</a>
+						<IconContainer url={'#'}>
+							<Linkedin size={20} />
+						</IconContainer>
+
+						<IconContainer url={'#'}>
+							<Github size={20} />
+						</IconContainer>
+
+						<IconContainer url={'#'}>
+							<Envelope size={20} />
+						</IconContainer>
 					</div>
 				</div>
 			</nav>
