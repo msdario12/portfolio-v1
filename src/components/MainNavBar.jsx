@@ -28,9 +28,13 @@ export const MainNavBar = () => {
 			animate={hidden ? 'show' : 'hidden'}
 			variants={variants}
 			transition={{ duration: 0.25 }}
-			className={`flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white py-3 sm:py-0 dark:bg-gray-900/70 backdrop-blur-lg dark:border-gray-700 sticky inset-x-0 shadow-lg`}>
+			className={`flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white py-3 sm:py-0 dark:bg-gray-900/10 ${
+				hidden ? 'dark:bg-gray-900/90 ' : 'dark:bg-gray-900/10'
+			} backdrop-blur-lg dark:border-gray-700 sticky inset-x-0 shadow-lg`}>
 			<nav
-				className='relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8'
+				className={`relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 ${
+					hidden ? 'h-24' : 'h-32'
+				}`}
 				aria-label='Global'>
 				<div className='flex items-center justify-between'>
 					<a
