@@ -1,9 +1,34 @@
 import { Envelope, Github, Linkedin } from 'react-bootstrap-icons';
 import { IconContainer } from './IconContainer';
+import { useEffect, useState } from 'react';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 
 export const MainNavBar = () => {
+	const [hidden, setHidden] = useState(false);
+	const { scrollY } = useScroll();
+
+	// useEffect(() => {
+	// 	return () => {
+	// 		scrollY.onChange();
+	// 	};
+	// });
+	useMotionValueEvent(scrollY, 'change', (latest) => {
+		if (latest > 400) {
+			setHidden(true);
+		} else {
+			setHidden(false);
+		}
+	});
+	const variants = {
+		show: { top: 0 },
+		hidden: { top: -150 },
+	};
 	return (
-		<header className='flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white py-3 sm:py-0 dark:bg-gray-900/70 backdrop-blur-lg dark:border-gray-700 sticky top-0 inset-x-0 shadow-lg'>
+		<motion.header
+			animate={hidden ? 'show' : 'hidden'}
+			variants={variants}
+			transition={{ duration: 0.25 }}
+			className={`flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white py-3 sm:py-0 dark:bg-gray-900/70 backdrop-blur-lg dark:border-gray-700 sticky inset-x-0 shadow-lg`}>
 			<nav
 				className='relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8'
 				aria-label='Global'>
@@ -72,6 +97,6 @@ export const MainNavBar = () => {
 					</div>
 				</div>
 			</nav>
-		</header>
+		</motion.header>
 	);
 };

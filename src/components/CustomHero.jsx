@@ -11,6 +11,7 @@ export const CustomHero = () => {
 					<div className='max-w-3xl  '>
 						<h1 className='block text-gray-200 text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold'>
 							Dario Ignacio Mansilla
+
 						</h1>
 					</div>
 					{/* <!-- End Title --> */}
@@ -25,7 +26,7 @@ export const CustomHero = () => {
 					{/* <!-- Buttons --> */}
 					{/* <div className='text-center'>
 						<a
-							className='inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800'
+							className='inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 ;hadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800'
 							href='#'>
 							Contacto
 						</a>
