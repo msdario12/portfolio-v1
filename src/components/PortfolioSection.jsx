@@ -15,7 +15,7 @@ export const PortfolioSection = () => {
 			{/* <!-- Masonry Cards --> */}
 			<div className=' px-4 py-10 sm:px-3 lg:px-8 lg:py-14 mx-auto container'>
 				{/* <!-- Grid --> */}
-				<div className='grid sm:grid-cols-12 gap-6 grid-rows-[0.5fr,33vh,33vh]'>
+				<div className='grid sm:grid-cols-12 md:gap-6 gap-y-5 grid-rows-[0.5fr,33vh,33vh]'>
 					<div className='col-span-4'>
 						<HomeTitle
 							title={'Proyectos'}

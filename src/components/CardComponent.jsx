@@ -38,7 +38,7 @@ const CardComponent = ({ urlImg, title, children, direction }) => {
 		<a
 			className='group relative block rounded-xl overflow-hidden h-full'
 			href='#'>
-			<div className='aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden h-full'>
+			<div className='rounded-xl overflow-hidden h-full'>
 				<img
 					className='group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl h-full w-full object-cover'
 					src={urlImg}
