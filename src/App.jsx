@@ -45,10 +45,12 @@ function App() {
 			<main className='bg-slate-900 text-gray-200 min-h-screen flex flex-col justify-between bg-gradient-to-b from-violet-600/[.15] via-transparent'>
 				<MainNavBar />
 				<CustomHero />
-				<section className='bg-gradient-to-t from-violet-200/[0.15]'>
+				<section
+					className='bg-gradient-to-t from-violet-200/[0.15]'
+					id='portfolio'>
 					<PortfolioSection />
 				</section>
-				<section className='bg-gradient-to-t from-violet-200/[0.15]'>
+				<section className='bg-gradient-to-t from-violet-200/[0.15]' id='tech'>
 					<HomeTitle title={'Tecnologías'} subtitle={''} />
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-5 container mx-auto min-h-screen content-center'>
 						<div className='my-10 grid gap-5 grid-cols-12 mx-auto'>

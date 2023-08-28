@@ -1,11 +1,32 @@
-import { Envelope, Github, Linkedin } from 'react-bootstrap-icons';
+import { Envelope, Github, Link, Linkedin } from 'react-bootstrap-icons';
 import { IconContainer } from './IconContainer';
 import { useEffect, useState } from 'react';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 
+const LinkScrollTo = ({ id, title, setSelectedLink, selectedLink }) => {
+	return (
+		<a
+			className={`font-medium  text-gray-500 hover:text-gray-400 sm:py-6 ${
+				selectedLink === id ? 'dark:text-gray-100' : 'dark:text-gray-400'
+			} dark:hover:text-gray-500`}
+			href={id}
+			onClick={(e) => {
+				e.preventDefault();
+				setSelectedLink(id);
+				window.scrollTo({
+					top: document.querySelector(id).offsetTop - 75,
+					behavior: 'smooth',
+				});
+			}}>
+			{title}
+		</a>
+	);
+};
+
 export const MainNavBar = () => {
 	const [hidden, setHidden] = useState(false);
 	const { scrollY } = useScroll();
+	const [selectedLink, setSelectedLink] = useState();
 
 	// useEffect(() => {
 	// 	return () => {
@@ -27,20 +48,26 @@ export const MainNavBar = () => {
 		<motion.header
 			animate={hidden ? 'show' : 'hidden'}
 			variants={variants}
-			transition={{ duration: 0.25 }}
+			transition={{ duration: 0.5 }}
 			className={`flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white py-3 sm:py-0 dark:bg-gray-900/10 ${
 				hidden ? 'dark:bg-gray-900/90 ' : 'dark:bg-gray-900/10'
 			} backdrop-blur-lg dark:border-gray-700 sticky inset-x-0 shadow-lg`}>
 			<nav
-				className={`relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 ${
-					hidden ? 'h-24' : 'h-32'
-				}`}
+				className={`relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8`}
 				aria-label='Global'>
 				<div className='flex items-center justify-between'>
 					<a
-						className='flex items-center text-2xl font-bold dark:text-white bg-gradient-to-tl from-blue-600 to-violet-600 rounded-full p-2 aspect-square '
+						className='flex items-center text-2xl font-bold dark:text-white bg-gradient-to-tl from-blue-600 to-violet-600 rounded-full p-1 aspect-square '
 						href='#'
-						aria-label='Dario Mansilla'>
+						aria-label='Dario Mansilla'
+						onClick={(e) => {
+							e.preventDefault();
+							setSelectedLink('home');
+							window.scrollTo({
+								top: document.querySelector('#home').offsetTop - 195,
+								behavior: 'smooth',
+							});
+						}}>
 						DM
 					</a>
 					<div className='sm:hidden'>
@@ -76,17 +103,18 @@ export const MainNavBar = () => {
 					id='navbar-collapse-with-animation'
 					className='hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block'>
 					<div className='flex flex-col font-bold text-lg gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7'>
-						<a
-							className='font-medium text-blue-600 sm:py-6 dark:text-blue-500'
-							href='#'
-							aria-current='page'>
-							Proyectos
-						</a>
-						<a
-							className='font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500'
-							href='#'>
-							Tecnologías
-						</a>
+						<LinkScrollTo
+							id={'#tech'}
+							title={'Tecnologías'}
+							selectedLink={selectedLink}
+							setSelectedLink={setSelectedLink}
+						/>
+						<LinkScrollTo
+							id={'#portfolio'}
+							title={'Proyectos'}
+							selectedLink={selectedLink}
+							setSelectedLink={setSelectedLink}
+						/>
 						<IconContainer url={'#'}>
 							<Linkedin size={20} />
 						</IconContainer>

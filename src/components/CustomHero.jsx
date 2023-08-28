@@ -2,7 +2,7 @@ import { CustomParticles } from './CustomParticles';
 
 export const CustomHero = () => {
 	return (
-		<div>
+		<div id='home'>
 			{/* <!-- Hero --> */}
 
 			<div className='min-h-screen flex justify-center lg:justify-start items-center relative mx-auto container'>
@@ -11,7 +11,6 @@ export const CustomHero = () => {
 					<div className='max-w-3xl  '>
 						<h1 className='block text-gray-200 text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold'>
 							Dario Ignacio Mansilla
-
 						</h1>
 					</div>
 					{/* <!-- End Title --> */}
