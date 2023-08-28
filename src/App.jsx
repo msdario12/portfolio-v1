@@ -41,7 +41,7 @@ const frontendImgSources = [
 ];
 function App() {
 	return (
-		<div>
+		<div style={{ scrollbarGutter: 'stable' }}>
 			<main className='bg-slate-900 text-gray-200 min-h-screen flex flex-col justify-between bg-gradient-to-b from-violet-600/[.15] via-transparent'>
 				<MainNavBar />
 				<CustomHero />
