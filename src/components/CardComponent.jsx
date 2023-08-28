@@ -7,14 +7,22 @@ const Title = ({ title }) => {
 };
 function Icons({ children }) {
 	return (
-		<div className='flex gap-3 justify-center items-center flex-wrap'>{children}</div>
+		<div className='flex gap-3 justify-center items-center flex-wrap'>
+			{children}
+		</div>
 	);
 }
 
 function Description({ children }) {
 	return <p className=' text-gray-200 mb-5'>{children}</p>;
 }
-const CardComponent = ({ urlImg, title, children, direction }) => {
+const CardComponent = ({
+	urlImg,
+	title,
+	children,
+	direction,
+	setIsModalOpen,
+}) => {
 	const className = 'bottom-full top-0 top-full left-0 left-full';
 	const options = {
 		top: {
@@ -35,9 +43,9 @@ const CardComponent = ({ urlImg, title, children, direction }) => {
 		},
 	};
 	return (
-		<a
-			className='group relative block rounded-xl overflow-hidden h-full'
-			href='#'>
+		<button
+			onClick={() => setIsModalOpen((prev) => !prev)}
+			className='group relative block rounded-xl overflow-hidden h-full'>
 			<div className='rounded-xl overflow-hidden h-full'>
 				<img
 					className='group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl h-full w-full object-cover'
@@ -52,7 +60,7 @@ const CardComponent = ({ urlImg, title, children, direction }) => {
 				className={`group-hover:top-0 absolute top-full bg-gray-800/80 rounded-lg p-4 transition-all lg:m-4 m-4  ease-in-out delay-75 duration-200   backdrop-blur`}>
 				{children}
 			</div>
-		</a>
+		</button>
 	);
 };
 CardComponent.Icons = Icons;
