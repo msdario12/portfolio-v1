@@ -11,6 +11,31 @@ import { FaBootstrap, FaReact } from 'react-icons/fa';
 import CardComponent from './CardComponent';
 import { useEffect, useState } from 'react';
 
+const portfolioData = {
+	colorDetection: {
+		title: 'Detección de colores',
+		shortDescription:
+			'Aplicación para detectar los colores predominantes de una imagen usando canvas y web-workers.',
+		longDescription: 'Aca va la descripción mas larga',
+		imgList: [
+			'https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3481&q=80',
+		],
+		gitHubLink: 'link a github',
+		deployLink: 'link al deploy',
+		iconsList: (
+			<>
+				<FaReact size={40} />
+				<FaBootstrap size={40} />
+				<SiExpress size={40} />
+				<SiNodedotjs size={40} />
+				<SiReactrouter size={40} />
+				<SiMongoose size={40} />
+				<SiSocketdotio size={40} />
+			</>
+		),
+	},
+};
+
 const ModalPortfolio = ({ isModalOpen, setIsModalOpen }) => {
 	useEffect(() => {
 		isModalOpen
@@ -35,11 +60,11 @@ const ModalPortfolio = ({ isModalOpen, setIsModalOpen }) => {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					id='hs-basic-modal'
-					className=' dark:bg-gray-800/80 w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto'>
+					className=' dark:bg-gray-800/80 w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto flex items-center'>
 					<div
 						className='absolute inset-0 w-full h-full -z-40'
 						onClick={() => setIsModalOpen(false)}></div>
-					<div className='opacity-100 overlay-open:duration-500  transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto'>
+					<div className='opacity-100 overlay-open:duration-500  transition-all sm:max-w-lg sm:w-full sm:mx-auto'>
 						<div className='flex flex-col bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] z-40 relative'>
 							<div className='flex justify-between items-center py-3 px-4 border-b dark:border-gray-700 '>
 								<h3 className='font-bold text-gray-800 dark:text-white'>
@@ -63,13 +88,8 @@ const ModalPortfolio = ({ isModalOpen, setIsModalOpen }) => {
 									type='button'
 									className='hs-dropdown-toggle py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800'
 									data-hs-overlay='#hs-basic-modal'>
-									Close
+									Cerrar
 								</button>
-								<a
-									className='py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800'
-									href='#'>
-									Save changes
-								</a>
 							</div>
 						</div>
 					</div>
@@ -107,19 +127,10 @@ export const PortfolioSection = () => {
 							title={'RollingVet'}
 							direction={'top'}>
 							<CardComponent.Description>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-								Eveniet sunt sed est illo in officia doloribus cum expedita
-								itaque. Atque id debitis laboriosam perferendis alias ipsam
-								placeat aliquam distinctio dolor!
+								Probando rey
 							</CardComponent.Description>
 							<CardComponent.Icons>
-								<FaReact size={40} />
-								<FaBootstrap size={40} />
-								<SiExpress size={40} />
-								<SiNodedotjs size={40} />
-								<SiReactrouter size={40} />
-								<SiMongoose size={40} />
-								<SiSocketdotio size={40} />
+								{portfolioData.colorDetection.iconsList}
 							</CardComponent.Icons>
 						</CardComponent>
 					</div>
@@ -129,25 +140,14 @@ export const PortfolioSection = () => {
 						{/* <!-- Card --> */}
 
 						<CardComponent
-							urlImg={
-								'https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3481&q=80'
-							}
-							title={'Detección de colores'}
+							urlImg={portfolioData.colorDetection.imgList[0]}
+							title={portfolioData.colorDetection.title}
 							direction={'bottom'}>
 							<CardComponent.Description>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-								Eveniet sunt sed est illo in officia doloribus cum expedita
-								itaque. Atque id debitis laboriosam perferendis alias ipsam
-								placeat aliquam distinctio dolor!
+								{portfolioData.colorDetection.shortDescription}
 							</CardComponent.Description>
 							<CardComponent.Icons>
-								<FaReact size={40} />
-								<FaBootstrap size={40} />
-								<SiExpress size={40} />
-								<SiNodedotjs size={40} />
-								<SiReactrouter size={40} />
-								<SiMongoose size={40} />
-								<SiSocketdotio size={40} />
+								{portfolioData.colorDetection.iconsList}
 							</CardComponent.Icons>
 						</CardComponent>
 						{/* <!-- End Card --> */}
