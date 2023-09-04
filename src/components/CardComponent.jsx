@@ -25,6 +25,8 @@ const CardComponent = ({
 	children,
 	direction,
 	setIsModalOpen,
+	deployLink,
+	repoLink,
 }) => {
 	const className = 'bottom-full top-0 top-full left-0 left-full';
 	const options = {
@@ -51,7 +53,7 @@ const CardComponent = ({
 			className='group relative block rounded-xl overflow-hidden h-full'>
 			<div className='rounded-xl overflow-hidden h-full'>
 				<img
-					className='group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl h-full w-full object-cover'
+					className='group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl h-full w-full object-cover object-center'
 					src={urlImg}
 					alt='Imagen de presentación de un proyecto de programación'
 				/>
@@ -67,7 +69,7 @@ const CardComponent = ({
 				className={`group-hover:opacity-100 bottom-0 opacity-0 absolute rounded-lg transition-all ease-in-out delay-75 duration-200 `}>
 				<a
 					className='relative text-slate-500 z-30 flex justify-center item rounded-se-full aspect-square bg-gradient-to-tr from-slate-500/60 to-50% hover:text-white transition-all duration-200 delay-75 p-7 group/item font-bold'
-					href='https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage'
+					href={repoLink}
 					target='_blank'
 					onClick={(e) => e.stopPropagation()}
 					rel='noreferrer'>
@@ -81,7 +83,7 @@ const CardComponent = ({
 				className={`group-hover:opacity-100 bottom-0 right-0 opacity-0 absolute rounded-lg transition-all ease-in-out delay-75 duration-200 `}>
 				<a
 					className='relative text-slate-500 z-30 flex justify-center item rounded-et-full aspect-square bg-gradient-to-tl from-slate-500/60 to-50% hover:text-white transition-all duration-200 delay-75 p-7 group/item font-bold'
-					href='https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage'
+					href={deployLink}
 					target='_blank'
 					onClick={(e) => e.stopPropagation()}
 					rel='noreferrer'>
