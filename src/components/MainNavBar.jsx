@@ -34,7 +34,7 @@ export const MainNavBar = () => {
   // 	};
   // });
   useMotionValueEvent(scrollY, 'change', (latest) => {
-    if (latest > 400) {
+    if (latest > 300) {
       setHidden(true);
     } else {
       setHidden(false);
