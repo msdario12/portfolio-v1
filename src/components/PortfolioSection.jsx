@@ -96,14 +96,6 @@ const ModalPortfolio = ({ isModalOpen, setIsModalOpen }) => {
       : (document.body.style.overflow = 'unset');
   }, [isModalOpen]);
 
-  const variants = {
-    open: {
-      opacity: 1,
-    },
-    closed: {
-      opacity: 0,
-    },
-  };
 
   return (
     <div><AnimatePresence>
@@ -113,7 +105,7 @@ const ModalPortfolio = ({ isModalOpen, setIsModalOpen }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           id='hs-basic-modal'
-          className=' dark:bg-gray-800/80 w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto flex items-center'>
+          className=' dark:b-ray-800/80 w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto flex items-center'>
           <div
             className='absolute inset-0 w-full h-full -z-40'
             onClick={() => setIsModalOpen(false)}></div>
@@ -153,7 +145,6 @@ const ModalPortfolio = ({ isModalOpen, setIsModalOpen }) => {
 };
 
 export const PortfolioSection = () => {
-  const [clickedProject, setClickedProject] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (

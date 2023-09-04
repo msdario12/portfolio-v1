@@ -52,8 +52,8 @@ function App() {
         </section>
         <section className='bg-gradient-to-t from-violet-200/[0.15]' id='tech'>
           <HomeTitle title={'Tecnologías'} subtitle={''} />
-          <div className='grid grid-cols-1 md:grid-cols-2  gap-5 container mx-auto min-h-screen content-center'>
-            <div className='my-10 grid gap-5 grid-cols-12 mx-auto'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-5 container mx-auto min-h-screen content-center'>
+            <div className='my-10  grid gap-5 grid-cols-12 mx-auto'>
               <div className='col-span-12'>
                 <HomeTitle title={'Backend'} subtitle={''} />
               </div>
