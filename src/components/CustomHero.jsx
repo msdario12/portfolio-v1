@@ -1,7 +1,16 @@
+import { useEffect, useRef } from "react";
 import { CustomParticles } from "./CustomParticles";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useAnimation,
+  useInView,
+} from "framer-motion";
 
 export const CustomHero = () => {
+  const control = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref, { amount: 0.5 });
   const container = {
     hidden: {
       opacity: 0,
@@ -36,22 +45,31 @@ export const CustomHero = () => {
       },
     },
   };
+  useEffect(() => {
+    if (inView) {
+      control.start("show");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
     <div id="home">
       {/* <!-- Hero --> */}
       <div className="min-h-screen flex justify-center lg:justify-start items-center relative mx-auto container">
         <AnimatePresence>
           <motion.div
+            ref={ref}
             variants={container}
             initial="hidden"
-            animate="show"
+            animate={control}
             className="max-w-[85rem] px-4 sm:px-6 py-24 space-y-8 text-center "
           >
             {/* <!-- Title --> */}
             <motion.div
               className="max-w-3xl"
               variants={item}
-              animate="show"
+              whileInView="show"
+              exit="exit"
               initial={"hidden"}
             >
               <h1 className="block text-gray-200 text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold">
@@ -63,12 +81,14 @@ export const CustomHero = () => {
             <motion.div
               variants={item}
               animate="show"
+              exit="exit"
               initial={"hidden"}
               className="max-w-3xl mx-auto"
             >
               <motion.p
                 variants={item}
                 animate="show"
+                exit="exit"
                 initial={"hidden"}
                 className="text-lg lg:text-2xl text-gray-400 font-semibold"
               >
