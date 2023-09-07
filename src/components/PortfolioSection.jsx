@@ -36,11 +36,11 @@ const portfolioData = {
 	descansar: {
 		title: 'DescansAR',
 		shortDescription:
-			'Aplicación realizada con JS vanilla, trabajando con localStorage para la simulación de una base de datos persistentes. Permite alquilar un departamento u hotel, asi como también publicar uno. Cuenta con registro, autenticación y rol de administrador.',
+			'Aplicación realizada en grupo con JS vanilla, trabajando con localStorage para la simulación de una base de datos persistentes. Permite alquilar un departamento u hotel, asi como también publicar uno. Cuenta con registro, autenticación y rol de administrador.',
 		longDescription: 'Aca va la descripción mas larga',
 		imgList: ['https://i.postimg.cc/cL7fLtVC/Website-UI-Page-Mockup.jpg'],
-		gitHubLink: 'link a github',
-		deployLink: 'link al deploy',
+		gitHubLink: 'https://github.com/msdario12/Proyecto2_Comision_45i',
+		deployLink: 'https://descansar.netlify.app',
 		iconsList: (
 			<>
 				<SiJavascript size={40} />
@@ -56,8 +56,8 @@ const portfolioData = {
 			'Aplicación realizada en React, permite leer e interpretar los colores de cada pixel de una imagen a traves de la API de Canvas para obtener los colores mas predominantes en la misma. Se utilizo la API de web workers para el procesamiento de las operaciones mas costosas. Todo se realiza en el lado del cliente.',
 		longDescription: 'Aca va la descripción mas larga',
 		imgList: ['https://i.postimg.cc/DwwR4FZh/color-detection-mock.jpg'],
-		gitHubLink: 'link a github',
-		deployLink: 'link al deploy',
+		gitHubLink: 'https://github.com/msdario12/color-detection',
+		deployLink: 'https://color-detection-v2-react.netlify.app',
 		iconsList: (
 			<>
 				<FaReact size={40} />
@@ -73,8 +73,8 @@ const portfolioData = {
 			'Aplicación FullStack para la gestion de turnos y pacientes de una veterinaria. Cuenta con una base de datos en MongoDB. Permite operaciones de gestion de turnos, asi como la de los datos de pacientes. Cuenta con sistema de notificaciones al llegar la hora de un turno previamente programado.',
 		longDescription: 'Aca va la descripción mas larga',
 		imgList: ['https://i.postimg.cc/ZqGS0X8T/rollingvet-mock.jpg'],
-		gitHubLink: 'link a github',
-		deployLink: 'link al deploy',
+		gitHubLink: 'https://github.com/msdario12/grupo-01-proyecto-final-rc',
+		deployLink: 'https://rolling-vet23.netlify.app',
 		iconsList: (
 			<>
 				<FaReact size={40} />
@@ -181,7 +181,7 @@ export const PortfolioSection = () => {
 							urlImg={portfolioData.rollingVet.imgList[0]}
 							title={portfolioData.rollingVet.title}
 							deployLink={portfolioData.rollingVet.deployLink}
-							repoLink={portfolioData.rollingVet.repoLink}
+							repoLink={portfolioData.rollingVet.gitHubLink}
 							direction={'top'}
 						>
 							<CardComponent.Description>
@@ -200,6 +200,8 @@ export const PortfolioSection = () => {
 						<CardComponent
 							urlImg={portfolioData.colorDetection.imgList[0]}
 							title={portfolioData.colorDetection.title}
+							deployLink={portfolioData.colorDetection.deployLink}
+							repoLink={portfolioData.colorDetection.gitHubLink}
 							direction={'bottom'}
 						>
 							<CardComponent.Description>
@@ -219,7 +221,7 @@ export const PortfolioSection = () => {
 							title={portfolioData.descansar.title}
 							direction={'top'}
 							deployLink={portfolioData.descansar.deployLink}
-							repoLink={portfolioData.descansar.repoLink}
+							repoLink={portfolioData.descansar.gitHubLink}
 						>
 							<CardComponent.Description>
 								{portfolioData.descansar.shortDescription}
