@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 
 const Title = ({ title }) => {
 	return (
-		<div className="text-sm font-bold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-gray-800 dark:text-gray-200">
+		<div className="text-sm font-bold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-gray-800 dark:text-gray-200 text-center">
 			{title}
 		</div>
 	)
