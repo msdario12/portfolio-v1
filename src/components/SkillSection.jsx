@@ -1,6 +1,6 @@
 import { HomeTitle } from '../App'
 import { SkillIcon } from './SkillIcon'
-import {  motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const backendImgSources = [
 	'nodejs/nodejs-original-wordmark.svg',
@@ -20,13 +20,7 @@ const frontendImgSources = [
 ]
 export const SkillSection = () => {
 	return (
-		<motion.div
-        transition={{
-          delay: 1.75,
-          staggerChildren: 5.5,
-          staggerDirection: -1
-        }}
-    >
+		<div>
 			<HomeTitle title={'Tecnologías'} subtitle={''} />
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-5 container mx-auto min-h-screen content-center">
 				<div className="my-10  grid gap-5 grid-cols-12 mx-auto">
@@ -42,14 +36,21 @@ export const SkillSection = () => {
 				<div className="my-10 grid gap-5 grid-cols-12 mx-auto">
 					<div className="col-span-12 ">
 						<HomeTitle title={'Frontend'} subtitle={''} />
-					</div>
+					</div>{' '}
 					{frontendImgSources.map((img) => (
-						<div key={img} className="col-span-6 md:col-span-4">
+						<motion.div
+							transition={{
+								delay: 0.75,
+								staggerChildren: 1,
+							}}
+							key={img}
+							className="col-span-6 md:col-span-4"
+						>
 							<SkillIcon key={img} name={img} />
-						</div>
+						</motion.div>
 					))}
 				</div>
 			</div>
-		</motion.div>
+		</div>
 	)
 }
