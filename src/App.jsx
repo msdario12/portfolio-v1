@@ -27,7 +27,7 @@ function App() {
 					<PortfolioSection />
 				</section>
 				<section
-					className="bg-gradient-to-t from-violet-200/[0.15]"
+					className="bg-gradient-to-b from-violet-200/[0.15]"
 					id="tech"
 				>
 					<SkillSection />

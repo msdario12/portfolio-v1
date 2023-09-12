@@ -1,6 +1,6 @@
 import { Github } from 'react-bootstrap-icons'
 import { VscLiveShare } from 'react-icons/vsc'
-import { motion, useAnimate, useInView } from 'framer-motion'
+import {  useAnimate, useInView } from 'framer-motion'
 import { useEffect } from 'react'
 
 const Title = ({ title }) => {

@@ -23,7 +23,8 @@ export const SkillSection = () => {
 		<motion.div
         transition={{
           delay: 1.75,
-          staggerChildren: 1.5,
+          staggerChildren: 5.5,
+          staggerDirection: -1
         }}
     >
 			<HomeTitle title={'Tecnologías'} subtitle={''} />
