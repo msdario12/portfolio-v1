@@ -88,7 +88,8 @@ export const CustomHero = () => {
 								className="text-lg lg:text-2xl text-gray-400 font-semibold"
 							>
 								Desarrollador Full Stack || React Developer ||
-								Node Developer || Ingeniero civil
+								Node Developer || Estudiante avanzado de
+								Ingenieria Civil
 							</motion.p>
 						</motion.div>
 

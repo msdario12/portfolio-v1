@@ -1,4 +1,5 @@
-import { HomeTitle } from '../App'
+import { HomeTitle } from '../HomeTitle'
+import { HomeSubtitle } from './HomeSubtitle'
 import { SkillIcon } from './SkillIcon'
 import { motion } from 'framer-motion'
 
@@ -21,22 +22,31 @@ const frontendImgSources = [
 export const SkillSection = () => {
 	return (
 		<div>
-			<HomeTitle title={'Tecnologías'} subtitle={''} />
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-5 container mx-auto min-h-screen content-center">
-				<div className="my-10  grid gap-5 grid-cols-12 mx-auto">
+				<div className="row-start-1">
+					<HomeTitle title={'Tecnologias'} />
+				</div>
+				<div className="my-10  row-start-2 grid gap-5 grid-cols-12 mx-auto">
 					<div className="col-span-12">
-						<HomeTitle title={'Backend'} subtitle={''} />
+						<HomeSubtitle subtitle={'Backend'} />
 					</div>
 					{backendImgSources.map((img) => (
-						<div key={img} className="col-span-6 md:col-span-4">
+						<motion.div
+							transition={{
+								delay: 0.75,
+								staggerChildren: 1,
+							}}
+							key={img}
+							className="col-span-6 md:col-span-4"
+						>
 							<SkillIcon key={img} name={img} />
-						</div>
+						</motion.div>
 					))}
 				</div>
-				<div className="my-10 grid gap-5 grid-cols-12 mx-auto">
+				<div className="my-10 grid gap-5 row-start-2 grid-cols-12 mx-auto">
 					<div className="col-span-12 ">
-						<HomeTitle title={'Frontend'} subtitle={''} />
-					</div>{' '}
+						<HomeSubtitle subtitle={'Frontend'} />
+					</div>
 					{frontendImgSources.map((img) => (
 						<motion.div
 							transition={{
